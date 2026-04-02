@@ -2,7 +2,7 @@
 
 > Visualize AI-generated JSON as UE5-style Blueprint node graphs — instantly.
 
-**[Chinese README](./README.zh.md)** | [Releases](https://github.com/jiulengjing/Json2Board/releases/latest) | [Issues](https://github.com/jiulengjing/Json2Board/issues)
+**[简体中文](./README.zh.md)** | [Releases](https://github.com/jiulengjing/Json2Board/releases/latest) | [Issues](https://github.com/jiulengjing/Json2Board/issues)
 
 [![Release](https://img.shields.io/badge/Release-v0.0.1-blue?style=flat-square)](https://github.com/jiulengjing/Json2Board/releases/tag/v0.0.1)
 [![Platform](https://img.shields.io/badge/Platform-Windows-lightgrey?style=flat-square)]()
