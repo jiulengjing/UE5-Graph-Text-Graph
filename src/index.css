@@ -1,0 +1,108 @@
+@import "tailwindcss";
+@import "@xyflow/react/dist/style.css";
+
+@theme {
+  /* Blueprint canvas */
+  --color-blueprint-bg:   #161616;
+  --color-blueprint-grid: #2a2a2a;
+
+  /* Node header backgrounds */
+  --color-header-event:    #9c1411;
+  --color-header-function: #0d4d8f;
+  --color-header-macro:    #484848;
+  --color-header-variable: #1a6b32;
+
+  /* UE5 pin colors */
+  --color-pin-exec:      #ffffff;
+  --color-pin-boolean:   #8b0000;
+  --color-pin-integer:   #38b4f0;
+  --color-pin-float:     #93c847;
+  --color-pin-string:    #f562a0;
+  --color-pin-name:      #d0c040;
+  --color-pin-vector:    #d9a800;
+  --color-pin-rotator:   #98b9f5;
+  --color-pin-transform: #f0803c;
+  --color-pin-object:    #1e90ff;
+  --color-pin-default:   #9e9e9e;
+}
+
+/* ── Global reset ── */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--color-blueprint-bg);
+  color: #c8c8c8;
+  font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+  overflow: hidden;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+/* ── ReactFlow canvas overrides ── */
+.react-flow__renderer {
+  background: var(--color-blueprint-bg);
+}
+
+/* Remove ReactFlow's default handle ring so our custom styles show cleanly */
+.react-flow__handle {
+  box-shadow: none !important;
+  /* Don't force transform — let our inline style handle positioning */
+}
+
+/* Node selection ring — UE5 uses a bright blue outline */
+.react-flow__node.selected > div {
+  outline: 1.5px solid #4dabf7 !important;
+  outline-offset: 1px;
+}
+
+/* ── Controls ── */
+.react-flow__controls {
+  background: #1c1c1c !important;
+  border: 1px solid #333 !important;
+  border-radius: 6px !important;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.5) !important;
+  overflow: hidden;
+}
+
+.react-flow__controls-button {
+  background: transparent !important;
+  border: none !important;
+  border-bottom: 1px solid #2a2a2a !important;
+  fill: #777 !important;
+  color: #777 !important;
+  transition: background 0.12s, fill 0.12s !important;
+  width: 24px !important;
+  height: 24px !important;
+}
+
+.react-flow__controls-button:hover {
+  background: #2a2a2a !important;
+  fill: #ccc !important;
+}
+
+.react-flow__controls-button:last-child {
+  border-bottom: none !important;
+}
+
+/* ── Selection box ── */
+.react-flow__selection {
+  background: rgba(77, 171, 247, 0.06) !important;
+  border: 1px solid rgba(77, 171, 247, 0.5) !important;
+}
+
+/* ── Minimap ── */
+.react-flow__minimap {
+  background: #1a1a1a !important;
+  border: 1px solid #333 !important;
+  border-radius: 6px !important;
+}
+
+/* ── Scrollbar hide ── */
+.no-scrollbar::-webkit-scrollbar { display: none; }
+.no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+/* Allow text selection in JSON panel */
+.json-panel-textarea {
+  -webkit-user-select: text;
+  user-select: text;
+}

@@ -1,0 +1,52 @@
+{
+  "version": "1.0",
+  "nodes": [
+    {
+      "id": "node_custom_event",
+      "type": "event",
+      "label": "Custom Event: Test Refresh",
+      "position": { "x": 100, "y": 200 },
+      "inputs": [],
+      "outputs": [
+        { "id": "exec_out", "label": "", "type": "exec" }
+      ]
+    },
+    {
+      "id": "node_print_string",
+      "type": "function",
+      "label": "Print String",
+      "position": { "x": 450, "y": 200 },
+      "inputs": [
+        { "id": "exec_in", "label": "", "type": "exec" },
+        { "id": "in_string", "label": "In String", "type": "data", "dataType": "string" }
+      ],
+      "outputs": [
+        { "id": "exec_out", "label": "", "type": "exec" }
+      ]
+    },
+    {
+      "id": "node_string_var",
+      "type": "variable",
+      "label": "Test Message Var",
+      "position": { "x": 150, "y": 300 },
+      "inputs": [],
+      "outputs": [
+        { "id": "val", "label": "Message", "type": "data", "dataType": "string" }
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "source": "node_custom_event",
+      "sourceHandle": "exec_out",
+      "target": "node_print_string",
+      "targetHandle": "exec_in"
+    },
+    {
+      "source": "node_string_var",
+      "sourceHandle": "val",
+      "target": "node_print_string",
+      "targetHandle": "in_string"
+    }
+  ]
+}
