@@ -6,11 +6,14 @@
 
 ---
 
+![alt text](UE5-GTG.jpg)
+
+![alt text](blueprint.jpg)
 ## What is UE5-Graph-Text-Graph?
 
-UE5-Graph-Text-Graph (abbreviated **GTG**) is a developer tool that bridges **Unreal Engine 5 blueprints**, **plain text**, and **visual node graphs** — in both directions.
+UE5-Graph-Text-Graph is a developer tool that bridges **Unreal Engine 5 blueprints**, **plain text**, and **visual node graphs** — in both directions.
 
-Instead of the verbose JSON format, GTG uses a minimal arrow-based syntax called **GTG-Script**:
+Instead of the verbose JSON format, UE5-Graph-Text-Graph uses a minimal arrow-based syntax called **GTG-Script**:
 
 ```
 [Node: Branch] (Macro)
@@ -21,6 +24,7 @@ Instead of the verbose JSON format, GTG uses a minimal arrow-based syntax called
 ```
 
 This format is:
+
 - **Token-efficient** — suitable for pasting directly into AI chat context
 - **Human-readable** — understandable without any tooling
 - **Renderable** — paste into the app and the canvas renders instantly
@@ -60,6 +64,7 @@ All three panes are fully resizable by dragging the dividers. Multiple tabs can 
 ## GTG-Script Syntax
 
 ### Node Declaration
+
 ```
 [Node: DisplayName] (Type)
 ```
@@ -72,6 +77,7 @@ All three panes are fully resizable by dragging the dividers. Multiple tabs can 
 | `Function` | Blue | Function call, Set variable |
 
 ### Pin Declaration
+
 ```
 <- IN [PinType: PinName]: SourceNode.SourcePin
 -> OUT [PinType: PinName]: TargetNode.TargetPin

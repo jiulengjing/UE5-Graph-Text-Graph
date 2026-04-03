@@ -6,6 +6,9 @@
 
 ---
 
+![alt text](UE5-GTG-1.jpg)
+
+![alt text](blueprint-1.jpg)
 ## 这是什么？
 
 UE5-Graph-Text-Graph（缩写 **GTG**）是一个开发者工具，用于打通 **虚幻引擎 5 蓝图**、**纯文本** 与 **可视化节点图** 三者之间的转译通道——支持双向操作。
