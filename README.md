@@ -9,6 +9,7 @@
 ![alt text](UE5-GTG.jpg)
 
 ![alt text](blueprint.jpg)
+
 ## What is UE5-Graph-Text-Graph?
 
 UE5-Graph-Text-Graph is a developer tool that bridges **Unreal Engine 5 blueprints**, **plain text**, and **visual node graphs** — in both directions.
