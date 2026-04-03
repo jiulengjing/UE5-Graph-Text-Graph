@@ -6,7 +6,7 @@ authors = ["UE5-Graph-Text-Graph"]
 edition = "2021"
 
 [[bin]]
-name = "UE5-GTG"
+name = "UE5-Graph-Text-Graph"
 path = "src/main.rs"
 
 [dependencies]
